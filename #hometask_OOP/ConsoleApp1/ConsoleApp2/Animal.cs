@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    internal class Animal
+    internal abstract class Animal
     {
         public string Ad { get; set; }
         public int Yas { get; set; }
@@ -15,17 +15,12 @@ namespace ConsoleApp2
 
         public Animal(string ad, int yas, string cins, string reng)
         {
-            Ad= ad;
-            Yas= yas;
-            Cins= cins;
-            Reng= reng;
+            Ad = ad;
+            Yas = yas;
+            Cins = cins;
+            Reng = reng;
         }
 
-
-        public virtual void SesCixarmaq ()
-        {
-
-        }
-
+        public abstract void SesCixarmaq();
     }
 }

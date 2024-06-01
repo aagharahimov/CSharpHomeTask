@@ -6,17 +6,8 @@ using System.Threading.Tasks;
 
 namespace Area
 {
-    internal class Shape
-        
+    internal abstract class Shape
     {
-        
-        public double Height { get; set; }
-        public double Radius { get; set; }
-
-
-        public virtual void CalculateArea()
-        {
-
-        }
+        public abstract void CalculateArea();
     }
 }

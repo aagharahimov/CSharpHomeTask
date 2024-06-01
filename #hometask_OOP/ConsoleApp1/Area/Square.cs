@@ -6,21 +6,24 @@ using System.Threading.Tasks;
 
 namespace Area
 {
-    
     internal class Square : Shape
     {
-        public double side { get; set; }
-        public double area  = 0;
+        private double side;
+        public double Side
+        {
+            get { return side; }
+            set { side = value; }
+        }
 
         public Square(double side)
         {
-            this.side = side;
+            Side = side;
         }
 
         public override void CalculateArea()
         {
-            area = side * side;
-            Console.WriteLine($"area of the square with the side of {side} is {area}");
+            double area = Math.Round(Side * Side, 2);
+            Console.WriteLine($"Area of the square with the side of {Side} is {area}");
         }
     }
 }

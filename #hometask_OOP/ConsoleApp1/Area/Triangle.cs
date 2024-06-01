@@ -8,22 +8,32 @@ namespace Area
 {
     internal class Triangle : Shape
     {
-        public double side { get; set; }
-        public double height { get; set; }
-        public double area = 0;
+        private double side;
+        private double height;
 
-        public Triangle(double side, double height) 
+        public double Side
         {
-            this.side = side;
-            this.height = height;
+            get { return side; }
+            set { side = value; }
+        }
+
+        public double Height
+        {
+            get { return height; }
+            set { height = value; }
+        }
+
+        public Triangle(double side, double height)
+        {
+            Side = side;
+            Height = height;
         }
 
         public override void CalculateArea()
         {
-            area = (side * height)/2;
-            Console.WriteLine($"area of the triangle with the side {side} and height {height} is {area}");
+            double area = Math.Round((Side * Height) / 2, 2);
+            Console.WriteLine($"Area of the triangle with the side {Side} and height {Height} is {area}");
         }
-
-
     }
 }
+

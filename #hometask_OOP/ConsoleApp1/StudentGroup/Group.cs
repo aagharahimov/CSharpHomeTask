@@ -1,42 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace StudentGroup
 {
-    internal class Group 
+    internal class Group
     {
-        
-        public string GroupNo { get; set; }
-        
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public int Limit { get; set; }
-        private Student[] students;
-        public Group(string groupNo, int limit, DateTime startDate, DateTime endDate ) 
+        public string GroupNo { get; }
+        public DateTime StartDate { get; }
+        public DateTime EndDate { get; }
+        public int Limit { get; }
+        private List<Student> students;
+        private List<Teacher> teachers;
+        private List<Topic> topics;
+
+        public Group(string groupNo, int limit, DateTime startDate, DateTime endDate)
         {
-            StartDate = startDate;
-            EndDate = endDate;
             GroupNo = groupNo;
             Limit = limit;
-            students = new Student[0];
+            StartDate = startDate;
+            EndDate = endDate;
+            students = new List<Student>();
+            teachers = new List<Teacher>();
+            topics = new List<Topic>();
         }
 
         public void AddStudent(Student student)
         {
-            if (Limit > students.Length)
+            if (students.Count < Limit)
             {
-                Array.Resize(ref students, students.Length + 1);
-                students[students.Length - 1] = student;
+                students.Add(student);
             }
             else
             {
                 Console.WriteLine("Group is full.");
             }
-
         }
 
         public void GetStudents()
@@ -49,28 +46,69 @@ namespace StudentGroup
 
         public void RemoveStudent(Student student)
         {
-            var index = Array.IndexOf(students, student);
-            if (index != -1)
+            if (students.Remove(student))
             {
-                for (int i = index; i < students.Length - 1; i++)
-                {
-                    students[i] = students[i + 1];
-                }
-
-                Array.Resize(ref students, students.Length - 1);
+                Console.WriteLine($"{student.Name} {student.Surname} has been removed.");
             }
-
             else
             {
-                Console.WriteLine("axtardiginiz mehsul sifarisde yoxdur");
+                Console.WriteLine("Student not in this group.");
             }
         }
 
         public void GetDetails()
         {
-            Console.WriteLine($"{GroupNo}, {StartDate.ToString("M/d/yyyy")}, {EndDate.ToString("M/d/yyyy")}, {Limit}");
+            Console.WriteLine($"{GroupNo}, {StartDate:dd-mm-yyyy}, {EndDate:dd-mm-yyyy}, {Limit}");
         }
 
+        public void AddTeacher(Teacher teacher)
+        {
+            teachers.Add(teacher);
+        }
 
+        public void RemoveTeacher(Teacher teacher)
+        {
+            if (teachers.Remove(teacher))
+            {
+                Console.WriteLine($"{teacher.Name} {teacher.Surname} has been removed.");
+            }
+            else
+            {
+                Console.WriteLine("Teacher not in this group.");
+            }
+        }
+
+        public void GetTeachers()
+        {
+            foreach (var teacher in teachers)
+            {
+                teacher.GetDetails();
+            }
+        }
+
+        public void AddTopic(Topic topic)
+        {
+            topics.Add(topic);
+        }
+
+        public void RemoveTopic(Topic topic)
+        {
+            if (topics.Remove(topic))
+            {
+                Console.WriteLine($"{topic.Name} has been removed.");
+            }
+            else
+            {
+                Console.WriteLine("Topic not in this group.");
+            }
+        }
+
+        public void GetTopics()
+        {
+            foreach (var topic in topics)
+            {
+                topic.GetDetails();
+            }
+        }
     }
 }

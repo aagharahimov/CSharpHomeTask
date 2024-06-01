@@ -11,26 +11,19 @@ namespace Area
         private double radius;
         public double Radius
         {
-            get
-            {
-
-            }
-            set
-            {
-
-            }
+            get { return radius; }
+            set { radius = value; }
         }
-        public double area = 0;
 
-        public Circle(double readius)
+        public Circle(double radius)
         {
             Radius = radius;
         }
 
         public override void CalculateArea()
         {
-            area = Math.Round(radius * radius * Math.PI, 2);
-            Console.WriteLine($"area of the circle with the radius of {radius} is {area}");
+            double area = Math.Round(Radius * Radius * Math.PI, 2);
+            Console.WriteLine($"Area of the circle with the radius of {Radius} is {area}");
         }
     }
 }
