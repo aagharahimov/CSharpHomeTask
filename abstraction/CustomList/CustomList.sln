@@ -3,15 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomList", "CustomList\CustomList.csproj", "{EB8B64F8-4FEB-4101-BEE9-E09245FFBDB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomList", "CustomList\CustomList.csproj", "{EB8B64F8-4FEB-4101-BEE9-E09245FFBDB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Swap", "2.Swap\2.Swap.csproj", "{AD373EA2-CFE9-40E6-B047-4FC9C84BB291}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.Swap", "2.Swap\2.Swap.csproj", "{AD373EA2-CFE9-40E6-B047-4FC9C84BB291}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.Group", "3.Group\3.Group.csproj", "{7ED65573-F9FC-408C-B8E4-58C942A9D1D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.Group", "3.Group\3.Group.csproj", "{7ED65573-F9FC-408C-B8E4-58C942A9D1D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Student", "4.Student\4.Student.csproj", "{0EFBD279-FAEB-4F56-88EA-4792BDB483EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.Student", "4.Student\4.Student.csproj", "{0EFBD279-FAEB-4F56-88EA-4792BDB483EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeShop", "CoffeeShop\CoffeeShop.csproj", "{A74C1EA7-1A6F-42A6-9643-329B853DC7C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeShop", "CoffeeShop\CoffeeShop.csproj", "{A74C1EA7-1A6F-42A6-9643-329B853DC7C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection", "Collection\Collection.csproj", "{07B73B82-6DF4-4A5E-A5BF-9783B91E402C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_Stack", "Collections_Stack\Collections_Stack.csproj", "{BD39B919-D2D5-4457-94DC-5BDA8FF4D081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_PhoneBook", "Collections_PhoneBook\Collections_PhoneBook.csproj", "{E0D5A037-B7DE-4DA4-A7F2-35E135292026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_Student", "Collections_Student\Collections_Student.csproj", "{389BF3A1-0B5D-467B-B064-93711CDDF8BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +47,22 @@ Global
 		{A74C1EA7-1A6F-42A6-9643-329B853DC7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A74C1EA7-1A6F-42A6-9643-329B853DC7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A74C1EA7-1A6F-42A6-9643-329B853DC7C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B73B82-6DF4-4A5E-A5BF-9783B91E402C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B73B82-6DF4-4A5E-A5BF-9783B91E402C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B73B82-6DF4-4A5E-A5BF-9783B91E402C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B73B82-6DF4-4A5E-A5BF-9783B91E402C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD39B919-D2D5-4457-94DC-5BDA8FF4D081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD39B919-D2D5-4457-94DC-5BDA8FF4D081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD39B919-D2D5-4457-94DC-5BDA8FF4D081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD39B919-D2D5-4457-94DC-5BDA8FF4D081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D5A037-B7DE-4DA4-A7F2-35E135292026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D5A037-B7DE-4DA4-A7F2-35E135292026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D5A037-B7DE-4DA4-A7F2-35E135292026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D5A037-B7DE-4DA4-A7F2-35E135292026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{389BF3A1-0B5D-467B-B064-93711CDDF8BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{389BF3A1-0B5D-467B-B064-93711CDDF8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{389BF3A1-0B5D-467B-B064-93711CDDF8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{389BF3A1-0B5D-467B-B064-93711CDDF8BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
